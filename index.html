@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dental Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="image/logo.png" width="200" alt="">
+        </div>
+        <div class="header-right">
+            <ul class="nav">
+                <li><a href="Treatments">Treatments</a></li>
+                <div class="l"></div>
+                <li><a href="Treatments">Dental Plans</a></li>
+                <div class="l"></div>
+                <li><a href="Treatments">Our Doctors</a></li>
+                <div class="l"></div>
+                <li><a href="Treatments">Careers</a></li>
+                <div class="l"></div>
+                <li><a href="Treatments">Find a Clinic</a></li>
+                <div class="l"></div>
+            </ul>
+
+        </div>
+        <div class="btn-div">
+            <button class="book-btn">Book Appointment</button>
+            <button class="help-btn">Help?</button>
+        </div>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="image/Frame1.png" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="image/Frame1.png" alt="Slide 1">
+            </div>
+            
+        </div>
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    
+    <!-- Carousel Dots for Navigation -->
+   
+
+
+    <section class="content-section">
+        <div class="content-info">
+            <p><span class="highlight">450+</span><b class="head"> World Class Clinics </b><br>Manned by 1200+ Super
+                Specialists</p>
+        </div>
+        <div class="location">
+            <div class="google-set">
+                <img src="image/google.png" width="100" class="google-img" alt="">
+                <p class="rating"><span class="highlight-rating"> <img src="image/star.png" width="20" alt="">4.9/5
+                    </span> <br><span class="highlight-lake"> 1.5 Lakh+ </span> 5 Star Ratings</p>
+
+            </div>
+            <div class="content-line"></div>
+
+            <div class="search-content">
+                <div class="dropdown">
+                    <input type="checkbox" id="dropdown__btn">
+                    <label class="btn btn-primary dropdown-toggle" for="dropdown__btn" type="button"
+                        data-toggle="dropdown" style="--clr:#0d7c66">
+                        Dropdown button
+                    </label>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <button class="locate-btn">Locate nearest Clove clinic</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let slideIndex = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+
+showSlides(slideIndex);
+
+function nextSlide(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlides(slideIndex);
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides(slideIndex);
+}
+
+function showSlides(n) {
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${n * 100}%)`;
+    });
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[n].classList.add('active');
+}
+
+document.querySelector('.prev').addEventListener('click', () => nextSlide(-1));
+document.querySelector('.next').addEventListener('click', () => nextSlide(1));
+dots.forEach((dot, index) => dot.addEventListener('click', () => currentSlide(index)));
+
+    </script>
+</body>
+</html>
